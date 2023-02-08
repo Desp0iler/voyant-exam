@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "playwright test --workers=1 --reporter=html --retries=1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Desp0iler/voyant-exam.git"

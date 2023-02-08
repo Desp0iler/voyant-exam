@@ -23,13 +23,13 @@ exports.ClientPage = class ClientPage {
   }
 
   async createNewClient(retired) {
-    await this.firstName.type(this.data.firstName);
-    await this.lastName.type(this.data.lastName);
-    await this.birthYear.fill(this.data.birthYear);
     await this.planDay.fill(this.data.planDay);
     await this.planMonth.fill(this.data.planMonth);
     await this.planYear.fill(this.data.PlanYear);
     await this.proviceDropdown.selectOption(this.data.province);
+    await this.firstName.fill(this.data.firstName);
+    await this.lastName.fill(this.data.lastName);
+    await this.birthYear.fill(this.data.birthYear);
     if (retired === 'true') {
       await this.retiredDropdown.selectOption('true');
       await this.doneButton.click();
